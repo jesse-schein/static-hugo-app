@@ -32,5 +32,5 @@ jobs:
         with:
           enabled-static-website: 'true'
           connection-string: ${{ secrets.CONNECTION_STRING }}
-          folder: ./public
+          folder: public
 
