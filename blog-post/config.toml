@@ -1,0 +1,12 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Jesse Schein's Blog"
+theme =  "bootstrap-4"
+
+[[menu.sidebar]]
+  name = "Back to Main Blog"
+  url = "https://blog.jesseschein.com"
+
+[[menu.navbar]]
+name = "Back to Main Blog"
+url = "https://blog.jesseschein.com"
