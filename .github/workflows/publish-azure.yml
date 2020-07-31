@@ -8,8 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-    env: 
-      working-directory: ./blog-post
+    defaults:
+      run:
+        working-directory: blog-post
     steps:
       - uses: actions/checkout@v2
         with:
