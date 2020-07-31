@@ -10,4 +10,4 @@ Now in 2020 its becoming a super hot topic to make static websites, as if it was
 
 You might be asking, well how am I doing? I'm using this new framework written in Go called Hugo. Its a static site generator, where you plug-in some config, choose a template, and I'm done. No CSS to worry about, no complicated dynamic content. Its just easy. When I want to write a new post, I can just push the file to my repo, and then have a Github Workflow setup or DevOps CI/CD pipeline to compile the site and publish it whereever.
 
-In my case this website is running on Azure Static Web Site. Which is in Public Preview right now. They have some templates setup already that can show how to build a SPA using a javascript framework, but I wanted to try Hugo out.
+In my case this website is running on Azure Storage with Statis Web App enabled. I pieced together two GitHub workflows, one that builds the hugo site and another that uploads to the storage account.
