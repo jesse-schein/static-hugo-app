@@ -23,6 +23,7 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      #deploy to azure
       - name: Deploy
         uses: tibor19/static-website-deploy@v1
         with:
