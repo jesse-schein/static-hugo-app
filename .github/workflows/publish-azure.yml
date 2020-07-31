@@ -8,24 +8,30 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
+    env: 
+      working-directory: ./blog-post
     steps:
       - uses: actions/checkout@v2
+        working-directory: ./blog-post
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
+        working-directory: ./blog-post
         with:
           hugo-version: '0.74.2'
           # extended: true
 
       - name: Build
+        working-directory: ./blog-post
         run: hugo --minify
 
       #deploy to azure
       - name: Deploy
         uses: tibor19/static-website-deploy@v1
+        working-directory: ./blog-post
         with:
           enabled-static-website: 'true'
           connection-string: ${{ secrets.CONNECTION_STRING }}
